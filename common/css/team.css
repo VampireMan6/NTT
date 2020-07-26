@@ -1,0 +1,165 @@
+.userbox{
+	width: 750rpx;
+	padding: 64rpx;
+}
+.set{
+	width: 48rpx;
+	height: 48rpx;
+}
+.head_iconbox{
+	width: 130rpx;
+	height: 130rpx;
+	position: relative;
+	/* overflow: hidden; */
+	padding-left: 16rpx;
+	/* transform: rotate(45deg); */
+}
+.head_icon{
+	width: 130rpx;
+	height: 130rpx;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	/* transform: rotate(-45deg); */
+}
+.head{
+	width: 100rpx;
+	height: 132rpx;
+}
+.boxF{
+	overflow: hidden;
+	transform: rotate(120deg);
+	width: 100rpx;
+	height: 132rpx;
+	position: relative;
+	z-index: 10;
+}
+.boxS{
+	overflow: hidden;
+	transform: rotate(-60deg);
+	width: 100%;
+	height: 100%;
+}
+.boxT{
+	 overflow: hidden;
+	 transform: rotate(-60deg);
+	 width: 100%;
+	 height: 100%;	
+}
+.xingxing{
+	width: 27rpx;
+	height: 27rpx;
+	margin-right: 8rpx;
+	margin-top: 8rpx;
+}
+.btn{
+	width: fit-content;
+	font-size: 20rpx;
+	background:linear-gradient(270deg,rgba(239,137,71,1) 0%,rgba(242,171,62,1) 100%);
+	padding: 2rpx 8rpx;
+	border-radius: 4rpx;
+	margin-bottom: 8rpx;
+}
+.yqbox{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.allmoney_box{
+	width: 686rpx;
+	background:rgba(43,45,61,1);
+	box-shadow:0px 0px 8rpx 0px rgba(0,0,0,0.04);
+	border-radius:4rpx;
+	padding: 46rpx 0;
+}
+.list_box{
+	width: 686rpx;
+	flex-wrap: wrap;
+	margin-bottom: 14rpx;
+}
+.list_item{
+	width:336rpx;
+	height:144rpx;
+	background:rgba(43,45,61,1);
+	box-shadow:0px 0px 8rpx 0px rgba(0,0,0,0.04);
+	border-radius:4rpx;
+	margin-top: 14rpx;
+}
+.opacity{
+	opacity: .7;
+}
+.me_item_icon{
+	width: 38rpx;
+	height: 36rpx;
+	margin-right: 20rpx;
+}
+
+.pro_lajibox{
+	position: relative;
+	margin-top: 16rpx;
+}
+.pro_laji{
+	width: 646rpx;
+	height: 16rpx;
+	border-radius: 8rpx;
+	background-color: #6C6C6C;
+	overflow: hidden;
+}
+.xian{
+	background:linear-gradient(360deg,rgba(239,137,71,1) 0%,rgba(242,171,62,1) 100%);
+	height: 16rpx;
+	width:  646rpx;
+	transition: all 1s;
+}
+.dian{
+	width:  646rpx;
+	position: absolute;
+	left: 0;
+	top: -8rpx;
+	transition: all 1s;
+}
+.dian_quan{
+	width: 32rpx;
+	height: 32rpx;
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	border: 10rpx solid #EF8C46;
+}
+
+.list_boxa{
+	width: 686rpx;
+	margin-top: 32rpx;
+	background-color: #2B2D3D;
+	
+}
+.list_boxa_tel{
+	width: 686rpx;
+	position: relative;
+	height: 74rpx;
+	border-bottom: 2rpx solid #1F2031;
+}
+.list_boxa_telitem{
+	width: 50%;
+	text-align: center;
+}
+.listxian{
+	position: absolute;
+	width: 343rpx;
+	height: 6rpx;
+	background:linear-gradient(270deg,rgba(239,137,71,1) 0%,rgba(242,171,62,1) 100%);
+	left: 0;
+	bottom: 0;
+	border-radius: 4rpx;
+	transition: all .3s;
+}
+.list_head{
+	width: 64rpx;
+	height: 64rpx;
+	border-radius: 32rpx;
+}
+.list_boxa_item{
+	width: 622rpx;
+	height: 132rpx;
+	border-bottom: 2rpx solid #1F2031;
+}

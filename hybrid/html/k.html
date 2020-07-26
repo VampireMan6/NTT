@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="js/kline.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.history.min.js"></script>
+		<script src="js/jquery.mousewheel.min.js"></script>
+		<script src="js/aaa.js" type="text/javascript" charset="utf-8"></script>
+		<script src="skin/js/base.js"></script>
+		<style type="text/css">
+			a.kxiana {
+				text-decoration: none;
+			}
+
+			a.kxiana:hover {
+				text-decoration: underline !important;
+			}
+
+			body {
+				background-color: #122134;
+			}
+		</style>
+		<title> </title>
+	</head>
+
+	<body>
+		<div id="chart_container" class="light" style="width: 100vw; visibility: visible;overflow: hidden;">
+			<!--height: 974px;  overflow: hidden;-->
+
+			<div id="chart_dom_elem_cache"></div>
+
+			<div id="chart_toolbar" style="left: 0px; top: 0px; width: 100vw; height: 29px;background-color: #FFFFFF;border-bottom: 1px solid #F1F1F1;">
+				<div class="chart_toolbar_minisep"></div>
+
+				<div id="chart_toolbar_periods_horz">
+					<ul class="chart_toolbar_tabgroup" style="padding-left: 5px; padding-right: 11px;">
+						<li id="chart_period_line_h" name="line" style="display: none !important; ">
+							<a class="chart_str_period_line">分时</a>
+						</li>
+						<li id="chart_period_1m_h" name="1m" style="display: none">
+							<a class="chart_str_period_1m">1分钟</a>
+						</li>
+						<!--<li id="chart_period_5m_h" name="5m" style="display: inline-block;">
+							<a class="chart_str_period_5m">5分钟</a>
+						</li>-->
+						<li id="chart_period_15m_h" name="15m" style="display: inline-block;">
+							<a class="chart_str_period_15m">15分钟</a>
+						</li>
+						<li id="chart_period_30m_h" name="30m" style="display: inline-block;">
+							<a class="chart_str_period_30m">30分钟</a>
+						</li>
+						<li id="chart_period_1h_h" name="1h" style="display: inline-block;">
+							<a class="chart_str_period_1h selected">1小时</a>
+						</li>
+						<li id="chart_period_2h_h" name="2h" style="display: none;">
+							<a class="chart_str_period_2h">2小时</a>
+						</li>
+						<li id="chart_period_4h_h" name="4h" style="display: none;">
+							<a class="chart_str_period_4h">4小时</a>
+						</li>
+						<li id="chart_period_6h_h" name="6h" style="display: none;">
+							<a class="chart_str_period_6h">6小时</a>
+						</li>
+						<li id="chart_period_12h_h" name="12h" style="display: none;">
+							<a class="chart_str_period_12h">12小时</a>
+						</li>
+						<li id="chart_period_1d_h" name="1d" style="display: inline-block;">
+							<a class="chart_str_period_1d">日线</a>
+						</li>
+					</ul>
+				</div>
+				<div class="chart_dropdown" id="chart_toolbar_periods_vert" style="display: none;">
+					<div class="chart_dropdown_t">
+						<a class="chart_str_period">更多</a>
+					</div>
+					<div class="chart_dropdown_data" style="margin-left: -58px;">
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<ul>
+											<li id="chart_period_line_v" name="line">
+												<a class="chart_str_period_line">分时</a>
+											</li>
+											<li id="chart_period_1m_v" name="1m">
+												<a class="chart_str_period_1m">1分钟</a>
+											</li>
+											<li id="chart_period_5m_v" name="5m">
+												<a class="chart_str_period_5m">5分钟</a>
+											</li>
+											<li id="chart_period_15m_v" name="15m">
+												<a class="chart_str_period_15m">15分钟</a>
+											</li>
+											<li id="chart_period_30m_v" name="30m">
+												<a class="chart_str_period_30m">30分钟</a>
+											</li>
+											<li id="chart_period_1h_v" name="1h">
+												<a class="chart_str_period_1h selected">1小时</a>
+											</li>
+											<li id="chart_period_2h_v" name="2h">
+												<a class="chart_str_period_2h">2小时</a>
+											</li>
+											<li id="chart_period_4h_v" name="4h">
+												<a class="chart_str_period_4h">4小时</a>
+											</li>
+											<li id="chart_period_6h_v" name="6h">
+												<a class="chart_str_period_6h">6小时</a>
+											</li>
+											<li id="chart_period_12h_v" name="12h">
+												<a class="chart_str_period_12h">12小时</a>
+											</li>
+											<li id="chart_period_1d_v" name="1d">
+												<a class="chart_str_period_1d">日线</a>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="chart_show_indicator" class="chart_toolbar_button chart_str_indicator_cap">技术指标</div>
+				<div id="chart_show_tools" class="chart_toolbar_button chart_str_tools_cap" style="display: none;">画线工具</div>
+				<div id="chart_toolbar_theme" style="display: none;">
+					<div class="chart_toolbar_label chart_str_theme_cap">主题选择</div>
+					<a name="dark" class="chart_icon chart_icon_theme_dark selected"></a>
+					<a name="light" class="chart_icon chart_icon_theme_light"></a>
+				</div>
+				<div class="chart_dropdown" id="chart_dropdown_settings" style="display: none;">
+					<div class="chart_dropdown_t">
+						<a class="chart_str_settings">更多</a>
+					</div>
+					<div class="chart_dropdown_data" style="margin-left: -131px;">
+						<table>
+							<tbody>
+								<tr id="chart_select_main_indicator">
+									<td class="chart_str_main_indicator">主指标</td>
+									<td>
+										<ul>
+											<li>
+												<a name="MA" class="selected">MA</a>
+											</li>
+											<li>
+												<a name="EMA" class="">EMA</a>
+											</li>
+											<li>
+												<a name="BOLL" class="">BOLL</a>
+											</li>
+											<li>
+												<a name="SAR" class="">SAR</a>
+											</li>
+											<li>
+												<a name="NONE" class="">关闭</a>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr id="chart_select_chart_style">
+									<td class="chart_str_chart_style">主图样式</td>
+									<td>
+										<ul>
+											<li>
+												<a class="selected">CandleStick</a>
+											</li>
+											<li>
+												<a>CandleStickHLC</a>
+											</li>
+											<li>
+												<a class="">OHLC</a>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr id="chart_select_theme" style="display: none;">
+									<td class="chart_str_theme">主题选择</td>
+									<td>
+										<ul>
+											<li>
+												<a name="dark" class="chart_icon chart_icon_theme_dark selected"></a>
+											</li>
+											<li>
+												<a name="light" class="chart_icon chart_icon_theme_light "></a>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr id="chart_enable_tools" style="display: none;">
+									<td class="chart_str_tools">画线工具</td>
+									<td>
+										<ul>
+											<li>
+												<a name="on" class="chart_str_on">开启</a>
+											</li>
+											<li>
+												<a name="off" class="chart_str_off selected">关闭</a>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr id="chart_enable_indicator" style="display: none;">
+									<td class="chart_str_indicator">技术指标</td>
+									<td>
+										<ul>
+											<li>
+												<a name="on" class="chart_str_on">开启</a>
+											</li>
+											<li>
+												<a name="off" class="chart_str_off selected">关闭</a>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<ul>
+											<li>
+												<a id="chart_btn_parameter_settings" class="chart_str_indicator_parameters">指标参数设置</a>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="chart_dropdown" id="chart_language_setting_div" style="padding-left: 5px;display: none;">
+					<div class="chart_dropdown_t">
+						<a class="chart_language_setting">语言(LANG)</a>
+					</div>
+					<div class="chart_dropdown_data" style="padding-top: 15px; margin-left: -11px;">
+						<ul>
+							<li style="height: 25px;">
+								<a name="zh-cn" class="selected">简体中文(zh-CN)</a>
+							</li>
+							<li style="height: 25px;">
+								<a name="en-us" class="">English(en-US)</a>
+							</li>
+							<%--                        <li style="height: 25px;"><a name="zh-tw" class="">繁體中文(zh-HK)</a></li>--%>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="chart_toolpanel" style="display: none; left: 0px; top: 30px; width: 32px; height: 657px;">
+
+			</div>
+
+			<div id="chart_canvasGroup" style="left: 0px; top: 30px;">
+				<canvas class="chart_canvas" style="width: 360px;height: 400px;cursor: none;" id="chart_mainCanvas" width="360px"
+				 height="350px"></canvas>
+				<canvas class="chart_canvas" style="width: 360px;height: 400px;cursor: none;" id="chart_overlayCanvas" width="360px"
+				 height="400px"></canvas>
+			</div>
+
+			<!--<div id="chart_tabbar" style="display: none; position: relative; left: 33px; top: 664px; width: 997px; height: 22px;">-->
+			<div id="chart_tabbar" style="display: none; position: relative; left: 33px; top: 25px;z-index: 3;background-color: #F4F4F4;">
+				<ul>
+					<li>
+						<a name="MACD" class="">MACD</a>
+					</li>
+					<li>
+						<a name="KDJ" class="">KDJ</a>
+					</li>
+					<li>
+						<a name="StochRSI" class="">StochRSI</a>
+					</li>
+					<li>
+						<a name="RSI" class="">RSI</a>
+					</li>
+					<li>
+						<a name="DMI" class="">DMI</a>
+					</li>
+					<li>
+						<a name="OBV" class="">OBV</a>
+					</li>
+					<li>
+						<a name="BOLL" class="">BOLL</a>
+					</li>
+					<li>
+						<a name="SAR" class="">SAR</a>
+					</li>
+					<li>
+						<a name="DMA" class="">DMA</a>
+					</li>
+					<li>
+						<a name="TRIX" class="">TRIX</a>
+					</li>
+					<li>
+						<a name="BRAR" class="">BRAR</a>
+					</li>
+					<li>
+						<a name="VR" class="">VR</a>
+					</li>
+					<li>
+						<a name="EMV" class="">EMV</a>
+					</li>
+					<li>
+						<a name="WR" class="">WR</a>
+					</li>
+					<li>
+						<a name="ROC" class="">ROC</a>
+					</li>
+					<li>
+						<a name="MTM" class="">MTM</a>
+					</li>
+					<li>
+						<a name="PSY">PSY</a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="chart_parameter_settings" style="left: 640px; top: 244px;">
+				<h2 class="chart_str_indicator_parameters">指标参数设置</h2>
+				<table>
+					<tbody>
+						<tr>
+							<th>MA</th>
+							<td>
+								<input name="MA"><input name="MA"><input name="MA"><input name="MA"><br>
+								<input name="MA"><input name="MA">
+							</td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+							<th>DMA</th>
+							<td>
+								<input name="DMA"><input name="DMA"><input name="DMA"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+						</tr>
+						<tr>
+							<th>EMA</th>
+							<td>
+								<input name="EMA"><input name="EMA"><input name="EMA"><input name="EMA"><br>
+								<input name="EMA"><input name="EMA">
+							</td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+							<th>TRIX</th>
+							<td>
+								<input name="TRIX"><input name="TRIX"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+						</tr>
+						<tr>
+							<th>VOLUME</th>
+							<td>
+								<input name="VOLUME"><input name="VOLUME"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+							<th>BRAR</th>
+							<td>
+								<input name="BRAR"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+						</tr>
+						<tr>
+							<th>MACD</th>
+							<td>
+								<input name="MACD"><input name="MACD"><input name="MACD"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+							<th>VR</th>
+							<td>
+								<input name="VR"><input name="VR"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+						</tr>
+						<tr>
+							<th>KDJ</th>
+							<td>
+								<input name="KDJ"><input name="KDJ"><input name="KDJ"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+							<th>EMV</th>
+							<td>
+								<input name="EMV"><input name="EMV"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+						</tr>
+						<tr>
+							<th>StochRSI</th>
+							<td>
+								<input name="StochRSI"><input name="StochRSI"><input name="StochRSI"><input name="StochRSI"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+							<th>WR</th>
+							<td>
+								<input name="WR"><input name="WR"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+						</tr>
+						<tr>
+							<th>RSI</th>
+							<td>
+								<input name="RSI"><input name="RSI"><input name="RSI"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+							<th>ROC</th>
+							<td>
+								<input name="ROC"><input name="ROC"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+						</tr>
+						<tr>
+							<th>DMI</th>
+							<td>
+								<input name="DMI"><input name="DMI"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+							<th>MTM</th>
+							<td>
+								<input name="MTM"><input name="MTM"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+						</tr>
+						<tr>
+							<th>OBV</th>
+							<td>
+								<input name="OBV"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+							<th>PSY</th>
+							<td>
+								<input name="PSY"><input name="PSY"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+						</tr>
+						<tr>
+							<th>BOLL</th>
+							<td>
+								<input name="BOLL"></td>
+							<td>
+								<button class="chart_str_default">默认值</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="close_settings">
+					<a class="chart_str_close">关闭</a>
+				</div>
+			</div>
+
+			<div id="chart_loading" class="chart_str_loading" style="left: 860px; top: 231px;">正在读取数据...</div>
+		</div>
+		<script src="resource/kline.assistant.js"></script>
+		<script type="text/javascript">
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if (r != null) return unescape(r[2]);
+				return null;
+			}
+			var scale = window.devicePixelRatio;
+
+			function setMate(str) {}
+			var kline = new Kline();
+			var symbol = GetQueryString("symbol"); 
+			if (symbol >= 0) {
+				kline.symbol = symbol;
+			}
+		</script>
+
+		<script type="text/javascript">
+			function plusready() {
+				//				scale = plus.screen.scale; //屏幕缩放比例
+				var width = window.innerWidth;
+				var e = window.innerHeight;
+				var canvas = '<canvas class="chart_canvas" style="width: ' + width + 'px;height: ' + (width * 6 / 5) +
+					'px;cursor: none;" id="chart_mainCanvas" width="' + (width * scale) + 'px" height="' + (width * 6 / 5 * scale) +
+					'px"></canvas><canvas class="chart_canvas" style="width: ' + (width) + 'px;height: ' + (width * 6 / 5) +
+					'px;cursor: none;" id="chart_overlayCanvas" width="' + (width * scale) + 'px" height="' + (width * 6 / 5 * scale) +
+					'px"></canvas>';
+				document.getElementById("chart_canvasGroup").innerHTML = canvas;
+
+				var chart = $("#chart_overlayCanvas");
+				var boxGesture = setGesture(chart); //得到一个对象
+				boxGesture.tap = function(t) { //双指开始
+					var r = t.clientX - 0;
+					var a = t.clientY - 0;
+					var i = ChartManager.getInstance();
+					i.onMouseMove("frame0", r * scale, 10, false);
+					i.redraw("OverlayCanvas")
+				};
+				boxGesture.scale = function(e) { //双指移动
+					var Instance = ChartManager.getInstance();
+					Instance.scale(e.scale > 1 ? 1 : -1);
+					Instance.redraw("All", true);
+					console.log("gesturestart" + e.scale);
+				};
+				boxGesture.start = function(t) {
+					GLOBAL_VAR.button_down = true;
+					var e = t.target.getBoundingClientRect();
+					var startX = t.originalEvent.changedTouches[0].pageX;
+					var startY = t.originalEvent.changedTouches[0].pageY;
+					var r = startX - e.left;
+					var a = startY - e.top;
+					ChartManager.getInstance().onMouseDown("frame0", r * scale, a * scale)
+				}
+				boxGesture.end = function(t) { //点击移开屏幕
+					var startX = t.originalEvent.changedTouches[0].pageX;
+					var startY = t.originalEvent.changedTouches[0].pageY;
+					GLOBAL_VAR.button_down = false;
+					var e = t.target.getBoundingClientRect();
+					var r = startX - e.left;
+					var a = startY - e.top;
+					var i = ChartManager.getInstance();
+					i.onMouseUp("frame0", r * scale, a * scale);
+					i.redraw("All")
+				}
+				boxGesture.move = function(t) { //滑动
+					var e = t.target.getBoundingClientRect();
+					var startX = t.originalEvent.changedTouches[0].pageX;
+					var startY = t.originalEvent.changedTouches[0].pageY;
+					var r = startX - e.left;
+					var a = startY - e.top;
+					var i = ChartManager.getInstance();
+					if (GLOBAL_VAR.button_down == true) {
+						i.onMouseMove("frame0", r * scale, a * scale, true);
+						i.redraw("All", false);
+					} else {
+						i.onMouseMove("frame0", r * scale, a * scale, false);
+						i.redraw("OverlayCanvas")
+					}
+				};
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "js/kline.draw.min.js" + "?time=" + new Date().getTime().toString();
+
+				document.body.appendChild(script);
+
+				setTimeout(function() { //直接可以缩放				
+					var i = ChartManager.getInstance();
+					i.onMouseMove("frame0", 1 * parseInt(scale), 10, false);
+					i.redraw("OverlayCanvas")
+				}, 2000);
+			}
+			plusready();
+		</script>
+
+	</body>
+
+</html>

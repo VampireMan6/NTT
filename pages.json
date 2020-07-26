@@ -1,0 +1,288 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path" : "pages/start/start",
+			"style" : {
+				"navigationStyle": "custom"	
+			}
+		},
+		{
+		    "path" : "pages/start/createWallet",
+		    "style" : {
+				"navigationBarBackgroundColor":"#1F2031",
+				"navigationBarTextStyle":"white",
+				"navigationBarTitleText":"创建钱包"
+				}
+		},
+		{
+		    "path" : "pages/start/backUpWallet",
+		    "style" : {
+				"navigationBarBackgroundColor":"#1F2031",
+				"navigationBarTextStyle":"white",
+				"navigationBarTitleText":"备份钱包"
+				}
+		},
+		{
+		    "path" : "pages/start/backUpWallet1",
+		    "style" : {
+				"navigationBarBackgroundColor":"#1F2031",
+				"navigationBarTextStyle":"white",
+				"navigationBarTitleText":"备份助记词"
+				}
+		},
+		{
+		    "path" : "pages/start/backUpWallet2",
+		    "style" : {
+				"navigationBarBackgroundColor":"#1F2031",
+				"navigationBarTextStyle":"white",
+				"navigationBarTitleText":"备份助记词"
+				}
+		},
+		{
+		    "path" : "pages/start/backUpWallet3",
+		    "style" : {
+				"navigationBarBackgroundColor":"#1F2031",
+				"navigationBarTextStyle":"white",
+				"navigationBarTitleText":"找回密码"
+				}
+		},
+		{
+		    "path" : "pages/wallet/bill",
+		    "style" : {
+				"navigationStyle": "custom"	
+				}
+		},
+		{
+            "path" : "pages/wallet/bill_detail",
+            "style" : {
+				"navigationStyle": "custom"	
+			}
+        },
+		{
+		    "path" : "pages/wallet/transfer",
+		    "style" : {
+				"navigationBarTitleText":"转出"
+			}
+		},{
+            "path" : "pages/wallet/transfer_result",
+            "style" : {
+				"navigationStyle": "custom"	
+			}
+        }
+		,{
+		    "path" : "pages/wallet/fullcoin",
+		    "style" : {
+				"navigationBarTitleText":"转入"
+			}
+		},
+		{
+		    "path" : "pages/resonance/resonance",
+		    "style" : {
+				// "navigationStyle": "custom"	,
+				"navigationBarTitleText":"共振"
+			}
+		},{
+			"path" : "pages/resonance/resonanec_result",
+			"style" : {
+				// "navigationStyle": "custom"
+					"navigationBarTitleText":"共振"
+			}
+		},{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom"	
+			}
+		}
+	    ,{
+            "path" : "pages/user/user",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/user/share",
+            "style" : {
+				"navigationBarTitleText": "分享"
+			}
+        }
+        ,{
+            "path" : "pages/user/set",
+            "style" : {
+				"navigationStyle": "custom"	
+			}
+        }
+        ,{
+            "path" : "pages/team/team",
+            "style" : {
+				"navigationBarTitleText": "团队"
+			}
+        }
+        ,{
+            "path" : "pages/user/kefu",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/question",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/about",
+            "style" : {
+				"navigationBarTitleText": "关于我们"
+			}
+        }
+        ,{
+            "path" : "pages/utils/webView",
+            "style" : {
+            	"navigationBarTitleText": ""
+            }
+        },{
+            "path" : "pages/user/document",
+            "style" : {
+            	"navigationBarTitleText": ""
+            }
+        }
+        ,{
+            "path" : "pages/user/userinfo",
+            "style" : {
+            	"navigationBarTitleText": "用户信息",
+            	"titleNView":{
+            		"buttons": [ //原生标题栏按钮配置,
+            		    {
+            				"text": "保存",
+            		    	"fontSize":"14px",
+							"width":"40px"
+            		    }
+            		]
+            	}
+            }
+        }
+        ,{
+            "path" : "pages/user/share_first",
+           "style" : {
+				"navigationBarTitleText": "分享",
+				"titleNView":{
+					"backgroundColor":"rgba(0,0,0,.5)"
+				}
+           }
+        },{
+            "path" : "pages/wallet/wallet",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/find/find",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/options/options",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/notice/notice",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/notice/notice_detail",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/manage/manage",
+            "style" : {
+				"navigationBarTitleText": "理财"
+			}
+        }
+        ,{
+            "path" : "pages/manage/manage_result",
+            "style" : {
+				"navigationBarTitleText": "投资结果"
+			}
+        }
+        ,{
+            "path" : "pages/manage/manage_detail",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/options/options_list",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/options/options_detail",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/options/options_account",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/convert/convert",
+            "style" : {
+				"navigationBarTitleText": "闪兑"
+			}
+        }
+        ,{
+            "path" : "pages/convert/convert_result",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "NTT",
+		"navigationBarBackgroundColor": "#1F2031",
+		"backgroundColor": "#1F2031",
+		"backgroundColorTop":"#1F2031",
+		"backgroundColorBottom":"#1F2031",
+		"app-plus": {
+			"background": "#1F2031",
+			"animationAlphaBGColor": "#1F2031"
+		}
+	},
+	"tabBar": {
+		"color": "#ffffff",
+		"selectedColor": "#ffffff",
+		"borderStyle": "black",
+		"backgroundColor": "#2B2D3D",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/img/indexn.png",
+				"selectedIconPath": "static/img/indexl.png",
+				"text": "首页"
+			},{
+				"pagePath": "pages/notice/notice",
+				"iconPath": "static/img/findn.png",
+				"selectedIconPath": "static/img/findl.png",
+				"text": "公告"
+			},{
+				"pagePath": "pages/find/find",
+				"iconPath": "static/img/findn.png",
+				"selectedIconPath": "static/img/findl.png",
+				"text": "发现"
+			},{
+				"pagePath": "pages/user/user",
+				"iconPath": "static/img/men.png",
+				"selectedIconPath": "static/img/mel.png",
+				"text": "我的"
+			}
+		]
+	}
+	
+}

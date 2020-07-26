@@ -1,0 +1,48 @@
+page{
+	background-color: #1F2031;
+	min-height: 100vh;
+}
+.topbox{
+	width:750rpx;
+	/* height:176rpx; */
+	/* background:linear-gradient(270deg,rgba(239,137,71,1) 0%,rgba(242,171,62,1) 100%); */
+	background-image: linear-gradient(to left, rgba(29, 84, 162, 1),rgba(37, 106, 195, 1));
+	border-radius:0px 0px 4rpx 4rpx;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+.top_nr{
+	position: absolute;
+	bottom: 14rpx;
+	width: 686rpx;
+	left: 32rpx;
+}
+.top_icon{
+	width: 40rpx;
+	height: 40rpx;
+}
+.nr_box{
+	width: 750rpx;
+	background:rgba(43,45,61,1);
+	margin-bottom: 32rpx;
+	padding-top: 32rpx;
+	padding-left: 32rpx;
+	padding-right: 32rpx;
+}
+.coin_icon{
+	width: 48rpx;
+	height: 48rpx;
+}
+.list{
+	width: 686rpx;
+	margin-bottom: 32rpx;
+}
+.list view{
+	max-width: 60%;
+}
+.more{
+	width: 26rpx;
+	height: 32rpx;
+}

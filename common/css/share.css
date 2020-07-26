@@ -1,0 +1,82 @@
+.bg{
+	width: 750rpx;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+.fanhui{
+	position: fixed;
+	z-index: 10;
+	top: 80rpx;
+	left: 30rpx;
+	font-size: 40rpx;
+	color: white;
+}
+.box{
+	position: relative;
+	z-index: 10;
+	margin-top:200rpx ;
+}
+.btn {
+	width: 620rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+	border-bottom-left-radius: 44rpx;
+	border-bottom-right-radius: 44rpx;
+	border-top-right-radius: 44rpx;
+	position: relative;
+	z-index: 100;
+}
+.logobox{
+	width: 128rpx;
+	height: 128rpx;
+	background-color: #FFFFFF;
+	border-radius: 10rpx;
+	text-align: center;
+	padding-top: 20rpx;
+}
+.logobox image{
+	width: 96rpx;
+	height: 96rpx;
+}
+.tel{
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 48rpx;
+	margin-top: 50rpx;
+}
+.mycode{
+	margin-top: 80rpx;
+	color: #FFFFFF;
+	font-size: 36rpx;
+}
+.code{
+	margin-top: 20rpx;
+	color: #FFFFFF;
+	font-size: 36rpx;
+	margin-bottom: 60rpx;
+}
+.hint{
+	margin-top: 32rpx;
+	margin-bottom: 100rpx;
+}
+.zuo{
+	position: absolute;
+	z-index: 10;
+	top: 500rpx;
+	left: 30rpx;
+	width: 48rpx;
+	height: 48rpx;
+}
+.you{
+	position: absolute;
+	z-index: 10;
+	top: 500rpx;
+	right: 30rpx;
+	width: 48rpx;
+	height: 48rpx;
+}
+.zhuan{
+	transform:rotate(180deg);
+}

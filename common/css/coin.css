@@ -1,0 +1,253 @@
+.topbox{
+	width: 686rpx;
+	margin-top: 20rpx;
+}
+.topcard_f{
+	width: 620rpx;
+	height: 20rpx;
+	background-color: #547CE2;
+}
+.topcard_t{
+	width: 650rpx;
+	height: 20rpx;
+	background-color: #F2AB3E;
+}
+.topcard{
+	width: 686rpx;
+	height: 200rpx;
+	background:rgba(43,45,61,1);
+	box-shadow:0px 4rpx 8rpx 0px rgba(0,0,0,0.5);
+	padding: 24rpx;
+}
+.top_coin_icon{
+	width: 48rpx;
+	height: 48rpx;
+}
+.xmore{
+	width: 24rpx;
+	height: 24rpx;
+}
+.tanchutel{
+	width: 686rpx;
+	font-size: 40rpx;
+	margin-top: 80rpx;
+}
+.tccard_box1{
+	width: 686rpx;
+	height: 200rpx;
+	box-shadow:0px 0px 8rpx 0px rgba(79,115,208,1);
+	background:#547CE2;
+	border-radius:4rpx;
+	padding: 16rpx;
+}
+.tccard_box2{
+	width: 686rpx;
+	height: 200rpx;
+	box-shadow:0px 0px 8rpx 0px rgba(242,171,62,1);
+	background:#F2AB3E;
+	border-radius:4rpx;
+	padding: 16rpx;
+}
+.box{
+	width:686rpx;
+	background:rgba(43,45,61,1);
+	box-shadow:0px 2rpx 12rpx 0px rgba(0,0,0,0.5);
+	border-radius:4rpx;
+	position: relative;
+}
+.address{
+	margin-top: 48rpx;
+	width: 600rpx;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.qrcode_box{
+	margin-top: 100rpx;
+	/* width: 260rpx;
+	height: 260rpx; */
+	/* padding: 10rpx; */
+	padding-top: 10rpx;
+	padding-left: 10rpx;
+	padding-right: 10rpx;
+	background-color: #FFFFFF;
+}
+
+.btn{
+	width: 686rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+	border-radius: 4rpx;
+}
+.hint{
+	padding: 20rpx 32rpx;
+}
+.hint_dian{
+	width: 8rpx;
+	height: 8rpx;
+	background:rgba(224,87,80,1);
+	margin-top: 14rpx;
+	border-radius: 50%;
+}
+
+.qiehuanbg{
+	width: 710rpx;
+	height: 314rpx;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.qiehuanbox{
+	width: 710rpx;
+	height: 314rpx;
+	border-radius:4rpx;
+	position: relative;
+}
+.qiehuannr{
+	width: 710rpx;
+	position: relative;
+	z-index: 10;
+	padding: 28rpx 44rpx;
+	height: 314rpx;
+}
+.qiehuan_icon{
+	width: 44rpx;
+	height: 44rpx;
+}
+.int_box{
+	width: 622rpx;
+	height: 80rpx;
+	/* border-bottom: 2rpx solid rgba(255,255,255,0.65); */
+	position: relative;
+	overflow: hidden;
+}
+.int_box:hover .xian{
+	animation: slide-right .5s 1;
+	background-color: #ffffff;
+}
+.int_boxa{
+	width: 622rpx;
+	height: 80rpx;
+	position: relative;
+	overflow: hidden;
+}
+.int_boxa:hover .xianb{
+	animation: slide-right .5s 1;
+	background-color: #000000;
+}
+.xaina{
+	position: absolute;
+	bottom: 0;
+	width: 622rpx;
+	height: 2rpx;
+	background-color: #3A404C;
+}
+.xian{
+	position: absolute;
+	bottom: 0;
+	width: 622rpx;
+	height: 2rpx;
+}
+.xianb{
+	position: absolute;
+	bottom: 0;
+	width: 622rpx;
+	height: 2rpx;
+}
+ @keyframes slide-right {
+    /* from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    } */
+	0%{transform: translateX(-100%);}
+	50%{transform: translateX(0);}
+	75%{transform: translateX(-5%);}
+	100%{transform: translateX(0);}
+  }
+  .qiehuanbt_box{
+	  width: 100%;
+	  position: absolute;
+	  bottom: 28rpx;
+	  left: 0;
+  }
+  .qiehuanbt{
+	  width: 50%;
+	  text-align: center;
+	  height: 55rpx;
+	  line-height: 55rpx;
+  }
+  .close{
+  	width: 38rpx;
+  	height: 30rpx;
+  	position: absolute;
+  	top: 30rpx;
+  	right: 30rpx;
+  }
+  .zhifu_box{
+  	position: relative;
+  	width: 686rpx;
+  	padding: 32rpx 20rpx;
+  	background-color: #2B2D3D;
+  	box-shadow:0px 0px 12rpx 0px rgba(0,0,0,0.5);
+  	border-radius:4rpx;
+  }
+  .tanchutel1{
+  	position: fixed;
+  	top: 120rpx;
+  	width: 686rpx;
+  	font-size: 40rpx;
+  }
+  .tcint_box{
+  	width: 100%;
+  	height: 64rpx;
+  	border-radius: 2rpx;
+  }
+  .tcint_box input{
+  	border-left: 2rpx solid #FFFFFF;
+  	border-top: 2rpx solid #FFFFFF;
+  	border-bottom: 2rpx solid #FFFFFF;
+  	height: 60rpx;
+  	line-height: 60rpx;
+  	padding-left: 20rpx;
+  	border-radius: 2rpx;
+  }
+  .int_bt{
+  	width: 126rpx;
+  	height: 64rpx;
+  	line-height: 64rpx;
+  }
+  .pay_money{
+	  width:100%;
+	  padding-bottom: 20rpx;
+	  border-bottom: 2rpx solid #FFFFFF;
+	  margin-top: 40rpx;
+  }
+  .err_box{
+  	width: 686rpx;
+  	background-color: #2B2D3D;
+  	box-shadow:0px 0px 12rpx 0px rgba(0,0,0,0.5);
+  	border-radius:4rpx;
+  	padding-top: 40rpx;
+  }
+  .btn_box{
+  	width: 686rpx;
+  	height: 110rpx;
+  	border-top: 2rpx solid #1F2031;
+  	margin-top: 40rpx;
+  }
+  .btn_box_l{
+  	width: 342rpx;
+  	height: 110rpx;
+  	text-align: center;
+  	line-height: 110rpx;
+  	border-right: 2rpx solid #1F2031;
+  }
+  .btn_box_r{
+  	width: 342rpx;
+  	height: 110rpx;
+  	text-align: center;
+  	line-height: 110rpx;
+  }

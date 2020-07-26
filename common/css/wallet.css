@@ -1,0 +1,108 @@
+page{
+}
+.topbox{
+	width:750rpx;
+	/* height:176rpx; */
+	background:linear-gradient(270deg,rgba(239,137,71,1) 0%,rgba(242,171,62,1) 100%);
+	border-radius:0px 0px 4rpx 4rpx;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+.top_nr{
+	position: absolute;
+	bottom: 14rpx;
+	width: 686rpx;
+	left: 32rpx;
+}
+.top_icon{
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.allmoney_box{
+	width: 686rpx;
+	background:rgba(43,45,61,1);
+	box-shadow:0px 0px 8rpx 0px rgba(0,0,0,0.04);
+	border-radius:4rpx;
+	padding: 46rpx 0;
+	margin-top: 32rpx;
+}
+
+.opacity{
+	opacity: .7;
+}
+.coin_list{
+	width: 686rpx;
+	margin-top: 64rpx;
+}
+
+.list_item_box{
+	width: 686rpx;
+	margin-bottom: 16rpx;
+	position: relative;
+}
+.zd_box{
+	width:160rpx;
+	height:48rpx;
+	background:rgba(43,45,61,1);
+	border-radius:4rpx;
+	padding: 0 30rpx;
+	margin-left: 526rpx;
+	margin-top: 20rpx;
+}
+.xmore{
+	width:24rpx;
+	height:16rpx;
+}
+.f_box{
+	width:686rpx;
+	height:170rpx;
+	background:rgba(43,45,61,1);
+	box-shadow:0px 0px 8rpx 0px rgba(0,0,0,0.16);
+	border-radius:4rpx;
+	margin-top: 16rpx;
+	padding: 16rpx;
+	position: relative;
+	z-index: 100;
+}
+.coin_icon{
+	width: 48rpx;
+	height: 48rpx;
+}
+.f_money{
+	font-size: 48rpx;
+	font-weight: bold;
+	margin-left: 58rpx;
+	margin-top: 16rpx;
+}
+.t_money{
+	font-size: 36rpx;
+	margin-top: 16rpx;
+}
+.t_box{
+	width:652rpx;
+	height:162rpx;
+	background:rgba(43,45,61,1);
+	box-shadow:0px 0px 8rpx 0px rgba(0,0,0,0.16);
+	border-radius:4rpx;
+	padding: 16rpx 54rpx;
+	transition: all .5s; 
+}
+.t_box_fz{
+	width:652rpx;
+	margin-top: 16rpx;
+}
+.t_box_fb{
+	width:652rpx;
+	margin-top: -148rpx;
+}
+.t_box_sb{
+	width:618rpx;
+	margin-top: -148rpx;
+}
+.t_box_tb{
+	width:602rpx;
+	margin-top: -148rpx;
+}

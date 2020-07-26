@@ -1,0 +1,5 @@
+node_modules/
+unpackage/dist/dev
+unpackage/dist/build
+unpackage/release
+unpackage/resources

@@ -1,0 +1,304 @@
+/*@font-face {*/
+    /*font-family: 'urw_din';*/
+    /*src: local("URWDIN-Bold"), local("URWDIN Bold"), url("../fonts/urw-din/urwdin-bold.eot");*/
+    /*src: url("../fonts/urw-din/urwdin-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/urw-din/urwdin-bold.woff2") format("woff2"), url("../fonts/urw-din/urwdin-bold.woff") format("woff"), url("../fonts/urw-din/urwdin-bold.ttf") format("truetype"), url("../fonts/urw-din/urwdin-bold.svg#urw_dinbold") format("svg");*/
+    /*font-weight: 900;*/
+    /*font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: 'urw_din';*/
+    /*src: url("../fonts/urw-din/urwdin-demi.eot");*/
+    /*src: local("URWDIN-Demi"), local("URWDIN Demi"), url("../urw-din/urwdin-demi.eot?#iefix") format("embedded-opentype"), url("../fonts/urw-din/urwdin-demi.woff2") format("woff2"), url("../fonts/urw-din/urwdin-demi.woff") format("woff"), url("../fonts/urw-din/urwdin-demi.ttf") format("truetype"), url("../fonts/urw-din/urwdin-demi.svg#urw_dindemi") format("svg");*/
+    /*font-weight: 700;*/
+    /*font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: 'urw_din';*/
+    /*src: local("URWDIN-Medium"), local("URWDIN Medium"), url("../fonts/urw-din/urwdin-medium.eot");*/
+    /*src: url("../fonts/urw-din/urwdin-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/urw-din/urwdin-medium.woff2") format("woff2"), url("../fonts/urw-din/urwdin-medium.woff") format("woff"), url("../fonts/urw-din/urwdin-medium.ttf") format("truetype"), url("../fonts/urw-din/urwdin-medium.svg#urw_dinmedium") format("svg");*/
+    /*font-weight: 400;*/
+    /*font-style: normal;*/
+/*}*/
+
+
+.pane-legend {
+    color: #8f98ad !important;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+	font-size: 8px !important;
+}
+
+ .pane-legend-minbtn {
+    display: none !important;
+}
+
+.pane-legend-line {
+    display: inline;
+    cursor: default;
+    pointer-events: none !important;
+    font-size: 12px !important;
+}
+
+.pane-legend-line > .main {
+    display: none !important;
+}
+
+.pane-legend-line.pane-legend-wrap.main {
+    padding-top: 0;
+}
+
+.pane-legend-line.pane-legend-wrap.main.expand-line {
+    padding-right: 10px;
+}
+
+.pane-legend-item-value-container {
+    line-height: 1;
+}
+
+.pane-legend-line.pane-legend-wrap.main .pane-legend-item-value-wrap {
+    line-height: 1;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+.pane-legend-line span {
+    font-size: 11px;
+    line-height: 1;
+}
+
+.pane-legend-line.pane-legend-wrap.main .pane-legend-item-value-wrap span {
+    line-height: 1;
+}
+
+.pane-legend-item-value {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.pane-legend-line.pane-legend-wrap.study > .pane-legend-line {
+    max-width: none;
+    font-size: 11px !important;
+}
+
+.pane-legend-line > span.pane-legend-line {
+    padding-right: 5px;
+}
+
+.pane-legend-line.pane-legend-wrap.study {
+    position: relative;
+}
+
+.pane-legend-line.pane-legend-wrap:first-child {
+    padding-right: 0;
+}
+
+.pane-legend-line.pane-legend-wrap.study > .pane-legend-line {
+    font-size: 12px !important;
+}
+
+.pane {
+    overflow: visible;
+    /*cursor: url(crosshair.6c091f7d5427d0c5e6d9dc3a90eb2b20.cur), crosshair;*/
+}
+
+
+body, html {
+    font-family: 'urw_din', Arial, Trebuchet MS, Tahoma, sans-serif;
+    font-size: 0.85rem;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #78909c;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.selectable, input, textarea {
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    font-family: 'urw_din', Arial, Trebuchet MS, Tahoma, sans-serif;
+}
+
+#library-container {
+    background: #20334d;
+    border-color: #20334d;
+}
+
+.tv-main-panel, .header-chart-panel {
+    background: transparent !important;
+}
+
+.separator-3cgsM4c1-{
+	background: #46587b !important;
+}
+.chart-page .chart-container {
+    border:1px solid #46587b;
+    overflow: visible !important;
+    background: #20334d;
+}
+
+#library-container .header-chart-panel {
+    min-height: 31px;
+    padding: 0 0 0 5px;
+    display: block !important;
+}
+
+.header-chart-panel .group {
+    margin: 5px 0 0;
+}
+
+
+.pane div {
+    overflow: visible !important;
+}
+
+._tv-dialog .button, ._tv-dialog .custom-select .switcher, ._tv-dialog .favored-list-container span, ._tv-dialog .submenu, .bottom-widgetbar-content.backtesting .button, .bottom-widgetbar-content.backtesting .custom-select .switcher, .bottom-widgetbar-content.backtesting .favored-list-container span, .bottom-widgetbar-content.backtesting .submenu, .header-chart-panel .button, .header-chart-panel .custom-select .switcher, .header-chart-panel .favored-list-container span, .header-chart-panel .submenu, .properties-toolbar .button, .properties-toolbar .custom-select .switcher, .properties-toolbar .favored-list-container span, .properties-toolbar .submenu {
+    cursor: pointer;
+}
+
+.control-bar-wrapper {
+    margin-left: -85px;
+    bottom: 1px;
+    height: 30px;
+}
+
+.control-bar > svg:first-child, .goto-date-control-bar:first-child {
+    margin-left: 0;
+}
+
+.control-bar > svg, .goto-date-control-bar, .back-to-present {
+    width: 30px !important;
+    height: 30px !important;
+    margin-left: 5px;
+    padding: 4px;
+    border: 1px solid #0e1b35;
+    background: rgba(14, 27, 53, 0.69);
+    border-radius: 0;
+    opacity: 1;
+    fill: #b0bec5;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.feature-no-touch .back-to-present:active, .feature-touch .back-to-present:active, .control-bar > svg path {
+    fill: #b0bec5 !important;
+}
+
+.feature-no-touch .control-bar > svg:active, .feature-no-touch .goto-date-control-bar:active, .feature-touch .control-bar > svg:active, .feature-touch .goto-date-control-bar:active {
+    background: #0e1b35;
+    border-color: #0e1b35;
+}
+
+.feature-no-touch .back-to-present:hover, .feature-no-touch .control-bar > svg:hover, .feature-no-touch .goto-date-control-bar:hover {
+    opacity: 1;
+    border-color: #0e1b35;
+    background: rgba(14, 27, 53, 0.88);
+}
+
+.feature-no-touch .control-bar > svg:active, .feature-no-touch .control-bar > svg:active path, .feature-no-touch .control-bar > svg:hover, .feature-no-touch .control-bar > svg:hover path, .feature-no-touch .goto-date-control-bar:active, .feature-no-touch .goto-date-control-bar:active path, .feature-no-touch .goto-date-control-bar:hover, .feature-no-touch .goto-date-control-bar:hover path, .feature-touch .control-bar > svg:active, .feature-touch .control-bar > svg:active path, .feature-touch .control-bar > svg:hover, .feature-touch .control-bar > svg:hover path, .feature-touch .goto-date-control-bar:active, .feature-touch .goto-date-control-bar:active path, .feature-touch .goto-date-control-bar:hover, .feature-touch .goto-date-control-bar:hover path {
+    fill: #ffffff !important;
+}
+
+.back-to-present {
+    bottom: 1px;
+    right: 0;
+}
+
+.bottom-widgetbar-content.backtesting .button, .header-chart-panel .button, .hotlist-controls .button, .symbol-edit-widget .button {
+    cursor: pointer;
+    padding: 0 8px;
+    border: 0 !important;
+    line-height: 24px;
+    height: 24px;
+    background: #31496a;
+    color: #b0bec5;
+    font-size: 11px;
+    font-weight: 400;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.feature-no-touch .header-chart-panel .button.disabled:active, .feature-touch .header-chart-panel .button.disabled:active, .header-chart-panel .button.disabled, .header-chart-panel .button.disabled.active {
+    border: 0 !important;
+    background: transparent !important;
+    opacity: 0.66;
+    pointer-events: none;
+}
+
+.bottom-widgetbar-content.backtesting .button.active, .ch-controls .button.active, .feature-no-touch .bottom-widgetbar-content.backtesting .button:active, .feature-no-touch .ch-controls .button:active, .feature-no-touch .header-chart-panel .button.active:hover, .feature-no-touch .header-chart-panel .button:active, .feature-no-touch .hotlist-controls .button:active, .feature-no-touch .save-load-buttons .active:hover, .feature-no-touch .save-load-buttons a:not(.link):active, .feature-no-touch .symbol-edit-widget .button:active, .feature-touch .bottom-widgetbar-content.backtesting .button:active, .feature-touch .ch-controls .button:active, .feature-touch .header-chart-panel .button:active, .feature-touch .hotlist-controls .button:active, .feature-touch .save-load-buttons a:not(.link):active, .feature-touch .symbol-edit-widget .button:active, .header-chart-panel .button.active, .hotlist-controls .button.active, .save-load-buttons .active, .symbol-edit-widget .button.active {
+    background: #31496a !important;
+    color: #0cbef3;
+}
+
+.favored-list-container span.active, .favored-list-container span.selected, .feature-no-touch .favored-list-container span:active, .feature-touch .favored-list-container span:active {
+    background: #31496a !important;
+    color: #0cbef3;
+}
+
+.feature-no-touch .header-chart-panel .button:hover, .feature-no-touch .symbol-edit-widget .button:hover {
+    background: #31496a;
+    color: #ffffff;
+}
+
+.favored-list-container.active span.submenu, .favored-list-container span.submenu.active {
+    background: #31496a !important;
+    color: #0cbef3;
+}
+
+.button.redo svg, .button.undo svg, .button.properties svg, .button.fullscreen svg, .button.drawings svg {
+    fill: #dee8f6 !important;
+    opacity: 0.75;
+}
+
+.feature-no-touch .button.redo:hover svg, .feature-no-touch .button.undo:hover svg, .feature-no-touch .button.properties:hover svg, .feature-no-touch .button.fullscreen:hover svg, .feature-no-touch .button.drawings:hover svg {
+    fill: #dee8f6 !important;
+    opacity: 1;
+}
+
+.button.drawings.active {
+    color: #fff !important;
+}
+
+.button.drawings.active svg {
+    fill: #fff !important;
+    opacity: 1 !important;
+}
+
+.button.drawings {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.button.drawings svg {
+    margin-top: 0 !important;
+    margin-right: 4px;
+    width: 16px !important;
+    height: 16px !important;
+}

@@ -1,0 +1,216 @@
+page{
+	background-color: #1F2031;
+}
+.topbox{
+	width: 686rpx;
+	margin-top: 50rpx;
+}
+.topcard_f{
+	width: 620rpx;
+	height: 20rpx;
+	background-color: #547CE2;
+}
+.topcard_t{
+	width: 650rpx;
+	height: 20rpx;
+	background-color: #F2AB3E;
+}
+.topcard{
+	width: 686rpx;
+	height: 190rpx;
+	background:rgba(43,45,61,1);
+	box-shadow:0px 4rpx 8rpx 0px rgba(0,0,0,0.5);
+	padding: 16rpx;
+}
+.coinbox{
+	margin-top: 30rpx;
+	width: 722rpx;
+	height: 500rpx;
+	position: relative;
+}
+.coinbox_bg{
+	width: 720rpx;
+	height: 500rpx;
+	position: absolute;
+	z-index: 1;
+}
+.coinbox_nr{
+	width: 720rpx;
+	position: relative;
+	z-index: 10;
+	padding: 32rpx 0;
+	margin-left: -16rpx;
+}
+.gzcoin_box{
+	width: 630rpx;
+	height: 70rpx;
+	border-bottom: 2rpx solid #FFFFFF;
+	margin-top: 40rpx;
+}
+.coin_icon{
+	width: 48rpx;
+	height: 48rpx;
+}
+.gzinput_box{
+	width: 630rpx;
+	height: 70rpx;
+	border-bottom: 2rpx solid #FFFFFF;
+	margin-top: 50rpx;
+}
+.gzinput_box input{
+	font-size: 34rpx;
+}
+.coin_q{
+	width: 630rpx;
+}
+.shuom{
+	margin-top: 50rpx;
+}
+.btn{
+	width: 686rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+}
+.list_box{
+	background:rgba(43,45,61,1);
+	box-shadow:0px 0px 12rpx 0px rgba(0,0,0,0.5);
+	width: 686rpx;
+	padding: 18rpx 32rpx;
+	margin-top: 50rpx;
+}
+.list_tel::before{
+	content: '|';
+	margin-right: 16rpx;
+	color: #256AC3;
+}
+.list_item{
+	width: 100%;
+	border-bottom: 2rpx solid #FFFFFF;
+	padding: 32rpx 0;
+}
+.tanchutel{
+	width: 686rpx;
+	font-size: 48rpx;
+	margin-top: 40rpx;
+}
+.tccard_box1{
+	width: 686rpx;
+	height: 190rpx;
+	box-shadow:0px 0px 8px 0px rgba(79,115,208,1);
+	background:#547CE2;
+	border-radius:4rpx;
+	padding: 16rpx;
+}
+.tccard_box2{
+	width: 686rpx;
+	height: 190rpx;
+	box-shadow:0px 0px 12px 0px rgba(242,171,62,1);
+	background:#F2AB3E;
+	border-radius:4rpx;
+	padding: 16rpx;
+}
+.tc_item{
+	width: 50%;
+	text-align: center;
+}
+.pro_lajibox{
+	position: relative;
+}
+.pro_laji{
+	width: 646rpx;
+	height: 16rpx;
+	border-radius: 8rpx;
+	background-color: #1F2031;
+	overflow: hidden;
+}
+.xian{
+	background:linear-gradient(360deg,rgba(239,137,71,1) 0%,rgba(242,171,62,1) 100%);
+	height: 16rpx;
+	width:  646rpx;
+	transition: all 1s;
+}
+.dian{
+	width:  646rpx;
+	position: absolute;
+	left: 0;
+	top: -8rpx;
+	transition: all 1s;
+}
+.dian_quan{
+	width: 32rpx;
+	height: 32rpx;
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	border: 10rpx solid #EF8C46;
+}
+
+.jiantou{
+	width: 76rpx;
+	height: 70rpx;
+}
+.close{
+	width: 38rpx;
+	height: 30rpx;
+	position: absolute;
+	top: 30rpx;
+	left: 30rpx;
+}
+.zhifu_box{
+	position: relative;
+	width: 686rpx;
+	padding: 32rpx 16rpx;
+	background-color: #2B2D3D;
+	box-shadow:0px 0px 12rpx 0px rgba(0,0,0,0.5);
+	border-radius:4rpx;
+}
+.tanchutel1{
+	position: fixed;
+	top: 40rpx;
+	width: 686rpx;
+	font-size: 48rpx;
+}
+.int_box{
+	width: 100%;
+	height: 64rpx;
+	border-radius: 2rpx;
+}
+.int_box input{
+	border-left: 2rpx solid #FFFFFF;
+	border-top: 2rpx solid #FFFFFF;
+	border-bottom: 2rpx solid #FFFFFF;
+	height: 60rpx;
+	line-height: 60rpx;
+	padding-left: 20rpx;
+	border-radius: 2rpx;
+}
+.int_bt{
+	width: 126rpx;
+	height: 64rpx;
+	line-height: 64rpx;
+}
+.err_box{
+	width: 686rpx;
+	background-color: #2B2D3D;
+	box-shadow:0px 0px 12rpx 0px rgba(0,0,0,0.5);
+	border-radius:4rpx;
+	padding-top: 40rpx;
+}
+.btn_box{
+	width: 686rpx;
+	height: 110rpx;
+	border-top: 2rpx solid #1F2031;
+	margin-top: 40rpx;
+}
+.btn_box_l{
+	width: 342rpx;
+	height: 110rpx;
+	text-align: center;
+	line-height: 110rpx;
+	border-right: 2rpx solid #1F2031;
+}
+.btn_box_r{
+	width: 342rpx;
+	height: 110rpx;
+	text-align: center;
+	line-height: 110rpx;
+}

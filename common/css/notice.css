@@ -1,0 +1,68 @@
+.logo_box{
+	width: 680rpx;
+	margin-bottom: 50rpx;
+}
+.logo{
+	width: 124rpx;
+	height: 124rpx;
+}
+.ntt{
+	width: 48rpx;
+	height: 28rpx;
+}
+.list_box{
+	width: 668rpx;
+	margin-left: 28rpx;
+	height: 600rpx;
+	overflow: hidden;
+}
+.list_box_left{
+	height: 100%;
+}
+.quan{
+	width: 22rpx;
+	height: 22rpx;
+	background-color: #2B2D3D;
+	border: 2rpx solid #FFFFFF;
+	border-radius: 50%;
+}
+.xian{
+	width: 6rpx;
+	height: 100%;
+	border-left: 2rpx dashed #FFFFFF;
+	border-right: 2rpx dashed #FFFFFF;
+	
+}
+.xbg{
+	background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.07));
+}
+.xbga{
+	/* background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.07)); */
+	background-color: rgba(255,255,255,0.07);
+}
+.list_box_right{
+	width: 606rpx;
+	padding-bottom: 120rpx;
+}
+.list_tel{
+	font-size: 32rpx;
+	font-weight: bold;
+	width: 606rpx;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.list_con{
+	width: 606rpx;
+	display: -webkit-box;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp:2;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	margin-top: 30rpx;
+}
+.list_img{
+	width: 606rpx;
+	height: 340rpx;
+}

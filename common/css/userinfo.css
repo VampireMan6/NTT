@@ -1,0 +1,88 @@
+.head_iconbox{
+	width: 130rpx;
+	height: 130rpx;
+	position: relative;
+	padding-left: 16rpx;
+	margin-top: 50rpx;
+}
+.head_icon{
+	width: 130rpx;
+	height: 130rpx;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+}
+.boxF{
+	overflow: hidden;
+	transform: rotate(120deg);
+	width: 100rpx;
+	height: 132rpx;
+	position: relative;
+	z-index: 10;
+}
+.boxS{
+	overflow: hidden;
+	transform: rotate(-60deg);
+	width: 100%;
+	height: 100%;
+}
+.boxT{
+	 overflow: hidden;
+	 transform: rotate(-60deg);
+	 width: 100%;
+	 height: 100%;
+	 background-color: #007AFF;
+}
+.head{
+	width: 100rpx;
+	height: 132rpx;
+}
+.nc_box{
+	width: 686rpx;
+	margin-top: 50rpx;
+	height: 80rpx;
+	border-bottom: 2rpx solid #3A404C;
+	position: relative;
+	overflow: hidden;
+}
+.nc_boxa{
+	width: 686rpx;
+	margin-top: 50rpx;
+	height: 80rpx;
+	position: relative;
+	overflow: hidden;
+}
+.xb_box{
+	
+}
+.xb_icon{
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 10rpx;
+	margin-left: 150rpx;
+}
+
+.nc_boxa:hover .xian{
+	animation: slide-right .5s 1;
+	background-color: #ffffff;
+}
+.xaina{
+	position: absolute;
+	bottom: 0;
+	width: 686rpx;
+	height: 2rpx;
+	background-color: #3A404C;
+}
+.xian{
+	position: absolute;
+	bottom: 0;
+	width: 686rpx;
+	height: 2rpx;
+}
+ @keyframes slide-right {
+	0%{transform: translateX(-100%);}
+	50%{transform: translateX(0);}
+	75%{transform: translateX(-5%);}
+	100%{transform: translateX(0);}
+  }

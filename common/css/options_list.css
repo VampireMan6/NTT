@@ -1,0 +1,162 @@
+.topbox{
+	width:750rpx;
+	/* height:176rpx; */
+	background:linear-gradient(270deg,rgba(239,137,71,1) 0%,rgba(242,171,62,1) 100%);
+	border-radius:0px 0px 4rpx 4rpx;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.top_nr{
+	position: absolute;
+	bottom: 14rpx;
+	width: 686rpx;
+	left: 32rpx;
+}
+.top_icon{
+	width: 40rpx;
+	height: 40rpx;
+}
+.tabs_box{
+	width: 482rpx;
+	height: 64rpx;
+	background:rgba(31,32,49,1);
+	border-radius:8rpx;
+	position: relative;
+}
+.tabs_k{
+	width:160rpx;
+	height:60rpx;
+	background:linear-gradient(270deg,rgba(239,137,71,1) 0%,rgba(242,171,62,1) 100%);
+	border-radius:8rpx;
+	position: absolute;
+	z-index: 11;
+	transition: all .3s; 
+	left: 2rpx;
+}
+.tabs_x_box{
+	width: 484rpx;
+	height: 64rpx;
+	position: absolute;
+	z-index: 15;
+}
+.tabs_x{
+	width:160rpx;
+	height:60rpx;
+	text-align: center;
+	line-height: 60rpx;
+}
+
+
+
+
+.botacc_box{
+	width: 750rpx;
+	margin-top: 20rpx;
+	background-color: #1F2130;
+	position: fixed;
+	z-index: 50;
+	top: 50rpx;
+	padding-top: 100rpx;
+}
+.botacc_item{
+	width: 33%;
+	text-align: center;
+}
+.botacc_itema{
+	width: 33%;
+	text-align: center;
+	border-left: 2rpx solid #FFFFFF;
+	border-right: 2rpx solid #FFFFFF;
+}
+.acc_box{
+	width: 750rpx;
+	height: 100rpx;
+	padding: 0 32rpx;
+	border-bottom: 2rpx solid #1F2031;
+	border-top: 16rpx solid #1F2031;
+	background-color: #1F2130;
+	position: fixed;
+	z-index: 50;
+	top: 50rpx;
+	padding-top: 100rpx;
+}
+.acc_item{
+	height: 60rpx;
+	line-height: 60rpx;
+}
+.acc_xz{
+	color: #E05750;
+	border-bottom: 4rpx solid #E05750;
+}
+.widbox{
+	width: 686rpx;
+	height: 60rpx;
+}
+.time{
+	width: 30rpx;
+	height: 30rpx;
+	margin-right: 10rpx;
+}
+.wida{
+	width: 380rpx;
+}
+.widb{
+	width: 120rpx;
+}
+.widc{
+	width: 160rpx;
+}
+.botacc_box{
+	width: 750rpx;
+	margin-top: 20rpx;
+}
+
+.botacc_itema{
+	width: 33%;
+	text-align: center;
+	border-left: 2rpx solid #FFFFFF;
+	border-right: 2rpx solid #FFFFFF;
+}
+.seeacc{
+	width: 686rpx;
+	text-align: right;
+	margin-top: 20rpx;
+}
+.record_tel{
+	width: 686rpx;
+	height: 60rpx;
+	border-bottom: 2rpx solid #FFFFFF;
+}
+.record_list{
+	height: 60rpx;
+}
+.rightmore{
+	width: 16rpx;
+	height: 24rpx;
+	margin-left: 10rpx;
+}
+.wid1{
+	width: 300rpx;
+}
+.wid2{
+	width: 100rpx;
+	text-align: center;
+}
+.wid3{
+	width: 260rpx;
+	text-align: right;
+}
+
+.list_box{
+	margin-top: 16rpx;
+	width: 686rpx;
+	background:rgba(43,45,61,1);
+	box-shadow:0px 0px 12rpx 0px rgba(0,0,0,0.5);
+	border-radius:4rpx;
+	padding: 24rpx 32rpx;
+}
+.list_box_item{
+	width: 300rpx;
+}

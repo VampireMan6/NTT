@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="iconfonts/iconfont.css"/>
+		<title>NTT</title>
+	</head>
+	<body>
+		<div id="app">
+			<div class="box">
+				<div id="">
+					<img class="logo" src="img/logo.png"/>
+				</div>
+				<div id="">
+					<img src="img/Register.png" class="register" />
+				</div>
+				<div class="title">最强共识-为极致而生</div>
+				<div class="contInput">
+					<div class="cont">
+						<input type="text" id="Phone" placeholder="请输入手机号码" />
+					</div>
+					<view class="xaina"></view>
+					<view class="xian"></view>
+				</div>
+				<div class="contInput">
+					<div class="cont" style="width: calc(100% - 100px);">
+						<input type="text" id="Code" placeholder="请输入验证码" />
+					</div>
+					<div id="getCode">获取验证码</div>
+					<view class="xaina"></view>
+					<view class="xian"></view>
+				</div>
+				<div class="contInput">
+					<div class="cont">
+						<input type="password" id="Pwd" placeholder="请设置登录密码" />
+					</div>
+					<view class="xaina"></view>
+					<view class="xian"></view>
+				</div>
+				<div class="contInput" style="" id="AuthCodeInput">
+					<div class="cont">
+						<input type="text" id="InviteCode" placeholder="请填写邀请码" />
+					</div>
+					<view class="xaina"></view>
+					<view class="xian"></view>
+				</div>
+				<div class="btnCont">
+					<button class="btn" id="ok">立即注册</button>
+				</div>
+				<div class="go_login">已有账号？<span id="download">下载APP</span></div>
+			</div>
+		</div>
+	</body>
+
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script>
+		let api_url = "https://ntt-api.fstchain.xyz";
+		let download_url = "https://www.265.im/ntt";
+		let download_url_ios = "https://www.265.im/ntt";
+		function Toast(msg,duration){
+			duration=isNaN(duration)?2000:duration;
+			var m = document.createElement('div');
+			m.innerHTML = msg;
+			m.style.cssText="max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
+			document.body.appendChild(m);
+			setTimeout(function() {
+				var d = 0.5;
+				m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+				m.style.opacity = '0';
+				setTimeout(function() { document.body.removeChild(m) }, d * 1000);
+			}, duration);
+		}
+
+		function GetQueryString(name) {
+			var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r!=null) return unescape(r[2]); return null;
+		}
+
+		let codeLoading = false;
+		let okLoading = false;
+		$(function () {
+			
+			let InviteCode = GetQueryString("InviteCode");
+
+			// if (!InviteCode) {
+			// 	// 没有邀请码
+				
+			// 	$("#AuthCodeInput").show();
+			// }
+			if (InviteCode) {
+				$("#InviteCode").val(InviteCode) 
+				//有邀请码
+				$("#InviteCode").attr('disabled','disabled')
+			}
+
+			$("#getCode").click(function () {
+
+				if (codeLoading) {
+					return false;
+				}
+				let Phone = $("#Phone").val();
+				if (!Phone) {
+					Toast("请输入手机号");
+					return false;
+				}
+
+				// 开始获取
+				codeLoading = true;
+				$.ajax({
+					url: api_url + "/post.notify.send",
+					method: "post",
+					data: {
+						mobile: Phone,
+						scene :'1',
+					},
+					dataType: 'json',
+					success: function (res) {
+						codeLoading = false;
+						if (res.code !== 200) {
+							Toast(res.message);
+							return false;
+						}
+						Toast("发送短信验证码成功");
+						var time = 60;
+						var timer = setInterval(function(){
+							time--;
+							$("#getCode").text(""+time+"S 重发");
+							if(time === 0){
+								clearInterval(timer);
+								$("#getCode").text("获取验证码");
+							}
+						},1000);
+					},
+					error: function () {
+						codeLoading = false;
+						Toast("网络繁忙，请稍后再试");
+					}
+				});
+			});
+
+			$("#ok").click(function () {
+
+				if (okLoading) {
+					return false;
+				}
+				let Phone = $("#Phone").val();
+				if (!Phone) {
+					Toast("请输入手机号");
+					return false;
+				}
+				let Pwd = $("#Pwd").val();
+				if (!Pwd) {
+					Toast("请输入登录密码");
+					return false;
+				}
+				let Code = $("#Code").val();
+				if (!Code) {
+					Toast("请输入验证码");
+					return false;
+				}
+
+				// if (!InviteCode) {
+				// 	InviteCode = $("#InviteCode").val();
+				// 	if (!InviteCode) {
+				// 		Toast("请填写邀请码");
+				// 		return false;
+				// 	}
+				// }
+				let data = {
+					mobile: Phone,
+					password: Pwd,
+					password2: Pwd,
+					invite_code: InviteCode,
+					vcode: Code,
+				};
+				// 开始获取
+				okLoading = true;
+				$.ajax({
+					url: api_url + "/post.register",
+					method: "post",
+					data: data,
+					dataType: 'json',
+					success: function (res) {
+						okLoading = false;
+						if (res.code !== 200) {
+							Toast(res.message);
+							return false;
+						}
+						Toast("注册成功");
+						// 跳转下载链接
+						let u = navigator.userAgent;
+						let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+						let isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+						if (isAndroid) {
+							window.location.href = download_url;
+						  // return true;
+						} else if (isIOS) {
+							window.location.href = download_url_ios;
+						  // return false;
+						}
+					},
+					error: function () {
+						okLoading = false;
+						Toast("网络繁忙，请稍后再试");
+					}
+				});
+			});
+
+			// 下载
+			$("#download").click(function () {
+				let u = navigator.userAgent;
+				let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+				let isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+				if (isAndroid) {
+					window.location.href = download_url;
+				  // return true;
+				} else if (isIOS) {
+					window.location.href = download_url_ios;
+				  // return false;
+				}
+			})
+
+
+		})
+
+	</script>
+
+</html>
